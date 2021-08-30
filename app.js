@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const axios = require("axios").default;
 const blogroute = require('./routes/blogroutes');
 const app = express();
-const dbURI = process.env.MONGODB_URI;
+const dbURI = 'mongodb+srv://Ahmad:1234@cluster0.zuwe4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
 mongoose.connect(dbURI, {useNewUrlParser: true , useUnifiedTopology: true})
 .then((result)=>app.listen(3000))
